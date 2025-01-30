@@ -1,0 +1,64 @@
+/* Place your CSS styles in this file */
+
+h1 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+body {
+    background-color: black
+}
+h3 {
+    text-align: center;
+    font-family: "monospace", Trebuchet MS;
+    font-weight: normal;
+    color: white;
+}
+h4 {
+    text-align: center;
+    font-family: "monospace", Trebuchet MS;
+    font-weight: normal;
+    color: white;
+}
+}
+.button {
+    background-color: #04AA6D;
+    padding: 15px 32px;
+    font-size: 16px;
+    color: white;
+    border: none;
+}
+.button:hover {
+    background-color: #0BDA51;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: #04AA6D;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center
+}
+.navbar a:hover {
+    background-color: #0BDA51
+}
+.navbar li {
+    float: left;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input {
+  display: inline-block;
+  float: left;
+}
