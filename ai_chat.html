@@ -19,7 +19,10 @@
 
         const genAI = new GoogleGenerativeAI("GOOGLE_API_KEY");
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        
+
+        function test() {
+            alert("You clicked the forbidden button")
+        }
         function generate_response() {
             const prompt = document.getElementById("prompt");
 
@@ -33,7 +36,7 @@
     <h3 style="color: white;">Enter a Prompt Below</h3>
     <br>
     <input type="text" id="prompt" name="prompt" size="100"/>
-    <button id = "generate_button" onclick=generate_response()>Generate My Response</button>
+    <button id = "generate_button" onclick=test()>Generate My Response</button>
     <div id = "output"></div>
 </body>
   
