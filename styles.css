@@ -5,6 +5,12 @@ h1 {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: normal;
 }
+h2 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif'
+    font-weight: normal;
+    color: white;
+}
 body {
     background-color: black
 }
@@ -57,6 +63,16 @@ label{
     clear: left;
     width: 250px;
     text-align: right;
+}
+.prompt {
+    text-align: center;
+}
+.label2 {
+    text-align: center;
+    color: white;
+}
+.generate_button {
+    text-align: center;
 }
 input {
   display: inline-block;
