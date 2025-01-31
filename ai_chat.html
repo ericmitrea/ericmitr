@@ -22,12 +22,18 @@
 
         const genAI = new GoogleGenerativeAI("GOOGLE_API_KEY");
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const prompt = document.getElementById("prompt");
+        
+        function generate_response() {
+            const prompt = document.getElementById("prompt");
 
-        const result = await model.generateContent(prompt);
-        const response = document.getElementById("response").innerHTML = <span style='color: white;'>result</span>;
-        console.log(result.response.text());
+            const result = await model.generateContent(prompt);
+            const response = document.getElementById("response").innerHTML = <span style='color: white;'>result</span>;
+            console.log(result.response.text());
+        }
     </script>
+    <label for="prompt">Enter a Prompt Below:</label>
+    <input type="text" id="prompt" name="prompt" size="100"/>
+    <button onclick=generate_response()>Generate My Response</button>
 </body>
   
 </html>
