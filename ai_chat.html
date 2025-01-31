@@ -22,15 +22,12 @@
 
         const genAI = new GoogleGenerativeAI("GOOGLE_API_KEY");
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
         const prompt = document.getElementById("prompt");
 
         const result = await model.generateContent(prompt);
-        document.getElementById("response").innerHTML = result;
+        const response = document.getElementById("response").innerHTML = <span style='color: white;'>result</span>;
         console.log(result.response.text());
     </script>
-    <br>
-    <p id="response"></p>
 </body>
   
 </html>
