@@ -39,7 +39,7 @@
         async function generate_response() {
             const prompt = document.getElementById("prompt");
 
-            const result = await model.generateContent(prompt);
+            var result = await model.generateContent(prompt);
             var result = await result.response.text();
             const response = document.getElementById("response").innerHTML = <span style='color: white;'>result</span>;
             alert(result)
