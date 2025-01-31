@@ -65,7 +65,8 @@ label{
     text-align: right;
 }
 .prompt {
-    text-align: center;
+    display: block;
+    margin: 0;
 }
 .label2 {
     text-align: center;
