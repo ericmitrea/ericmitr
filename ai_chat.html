@@ -25,6 +25,7 @@
     </p>
 </body>
   <script>
+      try{
         alert("init2")
         const { GoogleGenerativeAI } = require("@google/generative-ai");
 
@@ -46,5 +47,6 @@
             
         }
         alert("hello")
+          catch(e){alert(e);}
     </script>
 </html>
