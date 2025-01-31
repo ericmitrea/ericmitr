@@ -14,11 +14,6 @@
 <body>
   <h2 style="color: white;">AI Chatbot</h2>
   <h4>Coming Soon... WIP</h4>
-    <h3 style="color: white;">Enter a Prompt Below</h3>
-    <br>
-    <input type="text" id="prompt" name="prompt" size="100"/>
-    <button id = "generate_button" onclick=generate_response()>Generate My Response</button>
-    <div id = "output"></div>
     <script>
         const { GoogleGenerativeAI } = require("@google/generative-ai");
 
@@ -35,6 +30,11 @@
             document.getElementById("output").innerHTML = result;
         }
     </script>
+    <h3 style="color: white;">Enter a Prompt Below</h3>
+    <br>
+    <input type="text" id="prompt" name="prompt" size="100"/>
+    <button id = "generate_button" onclick=generate_response()>Generate My Response</button>
+    <div id = "output"></div>
 </body>
   
 </html>
