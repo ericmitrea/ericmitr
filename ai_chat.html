@@ -18,7 +18,15 @@
     <input type="text" id="prompt" name="prompt" size="100"/>
     <button onclick="">Generate My Response</button>
     <script>
+        const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+        const genAI = new GoogleGenerativeAI("AIzaSyBd3Q-lyKGvHTHO85VfYy6NRmzb2RMzkYc");
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
         const prompt = document.getElementById("prompt");
+
+        const result = await model.generateContent(prompt);
+        console.log(result.response.text());
     </script>
 </body>
   
