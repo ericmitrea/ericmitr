@@ -66,11 +66,7 @@ label{
 }
 .prompt {
     display: block;
-    margin: 0;
-}
-.label2 {
-    text-align: center;
-    color: white;
+    margin: 0 auto;
 }
 .generate_button {
     text-align: center;
