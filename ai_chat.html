@@ -24,7 +24,7 @@
         function test() {
             alert("You clicked the forbidden button")
         }
-        function generate_response() {
+        async function generate_response() {
             const prompt = document.getElementById("prompt");
 
             const result = await model.generateContent(prompt);
