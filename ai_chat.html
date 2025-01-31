@@ -26,8 +26,11 @@
         const prompt = document.getElementById("prompt");
 
         const result = await model.generateContent(prompt);
+        document.getElementById("response").innerHTML = result;
         console.log(result.response.text());
     </script>
+    <br>
+    <p id="response"></p>
 </body>
   
 </html>
