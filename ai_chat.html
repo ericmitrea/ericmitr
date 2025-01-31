@@ -17,7 +17,7 @@
     <script>
         const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-        const genAI = new GoogleGenerativeAI("GOOGLE_API_KEY");
+        const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         function test() {
@@ -27,11 +27,14 @@
             const prompt = document.getElementById("prompt");
 
             const result = await model.generateContent(prompt);
-            var result = result.response.text();
+            var result = await result.response.text();
             const response = document.getElementById("response").innerHTML = <span style='color: white;'>result</span>;
+            alert(result)
             console.log(result);
             document.getElementById("output").innerHTML = result;
+            
         }
+        alert("init");
     </script>
     <h3 style="color: white;">Enter a Prompt Below</h3>
     <br>
