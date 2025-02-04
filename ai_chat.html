@@ -14,40 +14,15 @@
 </head>
 <body>
   <h2 style="color: white;">AI Chatbot</h2>
-    <h3 style="color: white;">Enter a Prompt Below</h3>
+    <h3 style="color: white;">Click the button to get started</h3>
     <br>
-    <input type="text" id="prompt" name="prompt" size="100"/>
-    <button onclick="test();">Generate My Response</button>
-    <p style="color: white;">
-        <div id = "output"></div>
   <h4>Coming Soon... WIP</h4>
     
     
     </p>
 </body>
-  <script>
-     // try{
-        alert("init2")
-        const { GoogleGenerativeAI } = require("@google/generative-ai");
-
-        const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-        function test() {
-            alert("You clicked the forbidden button")
-        }
-        async function generate_response() {
-            const prompt = document.getElementById("prompt");
-
-            var result = await model.generateContent(prompt);
-            var result = await result.response.text();
-            const response = document.getElementById("response").innerHTML = <span style='color: white;'>result</span>;
-            alert(result)
-            console.log(result);
-            document.getElementById("output").innerHTML = result;
-            
-        }
-        alert("hello")
-        //  catch(e){alert(e);}
-    </script>
+<script>
+    <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/52345432-5432543-5435-435545434/webchat/v2/config.js"></script>
+</script>
 </html>
