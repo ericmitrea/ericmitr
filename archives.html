@@ -13,9 +13,58 @@
             <li><a href="">Coming soon...</a></li>
         </ul>
     </nav>
+    <style>
+      .dropdown-content {
+        display: none;
+        margin-top: 5px;
+        padding-left: 20px;
+        color: #333;
+      }
+    
+      .dropdown-toggle {
+        cursor: pointer;
+        user-select: none;
+        color: blue;
+        text-decoration: underline;
+      }
+    
+      .arrow {
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+    
+      .arrow.open {
+        transform: rotate(180deg); /* flip arrow */
+      }
+    </style>
 </head>
 <body>
     <h3>Welcome to the Archives tab. Every week I will post a new entry on a blog in the homepage, and after the week has passed, I will put all the old posts in this page!</h3>
+    <a class="dropdown-toggle" onclick="toggleDropdown(event)">
+      Click me <span class="arrow">▼</span>
+    </a>
+    <div class="dropdown-content">
+      <p>This is the hidden text that appears when you click the link.</p>
+    </div>
+    
+    <script>
+      function toggleDropdown(event) {
+        event.preventDefault(); // prevent default link behavior
+    
+        const toggle = event.currentTarget;
+        const content = toggle.nextElementSibling;
+        const arrow = toggle.querySelector('.arrow');
+    
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          arrow.classList.remove('open');
+        } else {
+          content.style.display = 'block';
+          arrow.classList.add('open');
+        }
+      }
+    </script>
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/02/04/04/20250204045932-N35FENI4.js"></script>
 </body>
