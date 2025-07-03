@@ -37,6 +37,14 @@
       .arrow.open {
         transform: rotate(180deg); /* flip arrow */
       }
+        
+      a {
+      display: block;  /* Make the anchor behave like a block element */
+      width: 100%;     /* Make the anchor fill the width of its container */
+      /* Add font-size if needed to match the h2's font size */
+      /* font-size: 1.5em; */
+      }
+        
     </style>
 </head>
 <body>
@@ -45,7 +53,7 @@
       Click me <span class="arrow">▼</span>
     </a>
     <div class="dropdown-content">
-      <p>This is the hidden text that appears when you click the link.</p>
+      <h2>This is the hidden text that appears when you click the link.</h2>
     </div>
     
     <script>
