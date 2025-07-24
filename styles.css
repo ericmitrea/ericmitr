@@ -26,7 +26,7 @@ h4 {
     font-weight: normal;
     color: white;
 }
-}
+
 .button {
     background-color: #04AA6D;
     padding: 15px 32px;
@@ -37,6 +37,42 @@ h4 {
 .button:hover {
     background-color: #0BDA51;
 }
+
+.navbar {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar a {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #444;
+}
+
+/*
 .navbar ul{
     list-style-type: none;
     background-color: #04AA6D;
@@ -57,21 +93,4 @@ h4 {
 .navbar li {
     float: left;
 }
-label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-}
-.prompt {
-    display: block;
-    margin: 0 auto;
-}
-.generate_button {
-    text-align: center;
-}
-input {
-  display: inline-block;
-  float: left;
-}
+*/
