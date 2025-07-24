@@ -34,7 +34,7 @@
       if (stored[username] === password) {
         localStorage.setItem('currentUser', username);
         localStorage.setItem('returningUser', 'true');
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
       } else {
         alert('Invalid username or password');
       }
@@ -54,13 +54,13 @@
       localStorage.setItem('users', JSON.stringify(stored));
       localStorage.setItem('currentUser', username);
       localStorage.setItem('returningUser', 'false');
-      window.location.href = 'index.html';
+      window.location.href = 'home.html';
     }
 
     function guest() {
       localStorage.setItem('currentUser', 'Guest');
       localStorage.setItem('returningUser', 'false');
-      window.location.href = 'index.html';
+      window.location.href = 'home.html';
     }
   </script>
 </body>
