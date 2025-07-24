@@ -44,8 +44,22 @@
       }
     </script>
 
-    <h2 style="color: white;">Welcome to my Webpage!<br>
-    I am Eric, and I coded this website in html.</h2>
+    <h2 id="greeting"></h2>
+
+    <script>
+      const user = localStorage.getItem('currentUser') || 'Guest';
+      const returning = localStorage.getItem('returningUser') === 'true';
+    
+      const greeting = returning
+        ? `Welcome back, ${user}!`
+        : `Welcome, ${user}!`;
+    
+      document.getElementById('greeting').innerText = greeting;
+    
+      // Set returningUser to true after first load
+      localStorage.setItem('returningUser', 'true');
+    </script>
+    <h2 style="color: white;">I am Eric, and I coded this website in html. </h2>
     <br>
     <h2 style="color: white;">Week of July 7 - 14</h2>
     <br>
