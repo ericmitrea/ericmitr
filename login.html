@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+  <h2>Login or Sign Up</h2>
+
+  <input id="username" placeholder="Username" />
+  <input id="password" type="password" placeholder="Password" />
+  <br><br>
+  <button onclick="login()">Login</button>
+  <button onclick="signup()">Sign Up</button>
+  <button onclick="guest()">Continue as Guest</button>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const stored = JSON.parse(localStorage.getItem('users') || '{}');
+
+      if (stored[username] === password) {
+        localStorage.setItem('currentUser', username);
+        localStorage.setItem('returningUser', 'true');
+        window.location.href = 'index.html';
+      } else {
+        alert('Invalid username or password');
+      }
+    }
+
+    function signup() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const stored = JSON.parse(localStorage.getItem('users') || '{}');
+
+      if (stored[username]) {
+        alert('Username already exists');
+        return;
+      }
+
+      stored[username] = password;
+      localStorage.setItem('users', JSON.stringify(stored));
+      localStorage.setItem('currentUser', username);
+      localStorage.setItem('returningUser', 'false');
+      window.location.href = 'index.html';
+    }
+
+    function guest() {
+      localStorage.setItem('currentUser', 'Guest');
+      localStorage.setItem('returningUser', 'false');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
